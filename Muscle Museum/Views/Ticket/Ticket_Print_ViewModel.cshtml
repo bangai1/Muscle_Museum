@@ -1,0 +1,27 @@
+﻿@model Create_Ticket_ViewModel
+
+<h2>Bilet Kes</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Yaş</label>
+        <input asp-for="Age" type="number" />
+    </div>
+
+    <div>
+        <label>
+            <input asp-for="IsTurkish" type="checkbox" />
+            Türk Vatandaşı
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input asp-for="IsTurkishSoldier" type="checkbox" />
+            Asker
+        </label>
+    </div>
+
+    <button type="submit">Bilet Kes</button>
+</form>

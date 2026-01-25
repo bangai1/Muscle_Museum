@@ -1,0 +1,28 @@
+﻿@model Museum_App.DTOs.TicketResultDto
+
+<h2>Bilet Bilgileri</h2>
+
+<hr />
+
+<p>
+    <strong>Bilet Türü:</strong>
+    @Model.Ticket_Type
+</p>
+
+<p>
+    <strong>Ücret:</strong>
+    @Model.Price ₺
+</p>
+
+@if (Model.Price == 0)
+{
+    <p style="color: green;">
+        Ücretsiz Bilet
+    </p>
+}
+else
+{
+    <p style="color: blue;">
+        Ücretli Bilet
+    </p>
+}

@@ -1,0 +1,34 @@
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.AssemblyInfoInputs.cache
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.AssemblyInfo.cs
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.csproj.CoreCompileInputs.cache
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.RazorAssemblyInfo.cache
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.RazorAssemblyInfo.cs
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\appsettings.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.staticwebassets.runtime.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.staticwebassets.endpoints.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.exe
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.deps.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.runtimeconfig.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.dll
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\bin\Debug\net8.0\Muscle Museum.pdb
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\scopedcss\bundle\Muscle Museum.styles.css
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\scopedcss\projectbundle\Muscle Museum.bundle.scp.css
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets\msbuild.Muscle Museum.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets\msbuild.Muscle Museum.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets\msbuild.build.Muscle Museum.props
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Muscle Museum.props
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Muscle Museum.props
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.dll
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\refint\Muscle Museum.dll
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.pdb
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\Muscle Museum.genruntimeconfig.cache
+C:\Users\berkay\source\repos\Muscle Museum\Muscle Museum\obj\Debug\net8.0\ref\Muscle Museum.dll

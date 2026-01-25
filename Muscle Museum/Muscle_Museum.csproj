@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Muscle_Museum</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Enums\**" />
+    <Content Remove="Views\Enums\**" />
+    <EmbeddedResource Remove="Views\Enums\**" />
+    <None Remove="Views\Enums\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Museum.App\Museum_App.csproj" />
+    <ProjectReference Include="..\Museum.Infrastructure\Museum_Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

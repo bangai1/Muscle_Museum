@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Muscle Museum\\Muscle_Museum.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

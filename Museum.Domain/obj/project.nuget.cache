@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vGQI7zPkUh4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\berkay\\source\\repos\\Muscle Museum\\Museum.Domain\\Museum_Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\berkay\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

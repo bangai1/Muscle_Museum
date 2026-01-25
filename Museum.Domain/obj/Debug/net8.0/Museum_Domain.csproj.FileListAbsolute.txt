@@ -1,0 +1,12 @@
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\bin\Debug\net8.0\Museum_Domain.deps.json
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\bin\Debug\net8.0\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\bin\Debug\net8.0\Museum_Domain.pdb
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.AssemblyInfoInputs.cache
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.AssemblyInfo.cs
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.csproj.CoreCompileInputs.cache
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\refint\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.pdb
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\ref\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle Museum\Museum.Domain\obj\Debug\net8.0\Museum_Domain.csproj.AssemblyReference.cache

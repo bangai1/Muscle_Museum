@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Muscle_Museum.props" />
+</Project>

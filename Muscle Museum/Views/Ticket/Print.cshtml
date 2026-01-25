@@ -1,0 +1,48 @@
+﻿@model Ticket_Print_ViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket</title>
+
+    <style>
+        body {
+            font-family: monospace;
+            width: 300px;
+            margin: auto;
+        }
+
+        .ticket {
+            border: 1px dashed black;
+            padding: 10px;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <div class="ticket">
+        <h3>
+            <h3 style="text-align:center;">
+            <img src="~/lib/images/logo.png" alt="logo" />
+            </br>
+            <h3 style="text-align:center;">
+            Hava Kuvvetleri Ankara  Müzesi
+        </h3>
+        <hr />
+
+        <p>Tarih: @Model.Date</p>
+        <p>Ücret: @Model.Price ₺</p>
+        <p>Referans: @Model.ReferenceNo</p>
+
+        <hr />
+        <p>İyi gezmeler dileriz.</p>
+    </div>
+
+    <br />
+
+    <button onclick="window.print()">🖨 Yazdır</button>
+
+</body>
+</html>
