@@ -15,3 +15,21 @@ C:\Users\berkay\source\repos\Muscle Museum\Museum.Infrastructure\bin\Debug\net8.
 C:\Users\berkay\source\repos\Muscle Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_App.pdb
 C:\Users\berkay\source\repos\Muscle Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Domain.pdb
 C:\Users\berkay\source\repos\Muscle Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_I.6D5EAA79.Up2Date
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Infrastructure.deps.json
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Infrastructure.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Infrastructure.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_App.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_App.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\bin\Debug\net8.0\Museum_Domain.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.csproj.AssemblyReference.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.AssemblyInfoInputs.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.AssemblyInfo.cs
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.sourcelink.json
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_I.6D5EAA79.Up2Date
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\refint\Museum_Infrastructure.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\Museum_Infrastructure.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.Infrastructure\obj\Debug\net8.0\ref\Museum_Infrastructure.dll

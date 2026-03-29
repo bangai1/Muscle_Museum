@@ -13,3 +13,19 @@ C:\Users\berkay\source\repos\Muscle Museum\Museum.App\obj\Debug\net8.0\Museum_Ap
 C:\Users\berkay\source\repos\Muscle Museum\Museum.App\obj\Debug\net8.0\refint\Museum_App.dll
 C:\Users\berkay\source\repos\Muscle Museum\Museum.App\obj\Debug\net8.0\Museum_App.pdb
 C:\Users\berkay\source\repos\Muscle Museum\Museum.App\obj\Debug\net8.0\ref\Museum_App.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\bin\Debug\net8.0\Museum_App.deps.json
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\bin\Debug\net8.0\Museum_App.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\bin\Debug\net8.0\Museum_App.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\bin\Debug\net8.0\Museum_Domain.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\bin\Debug\net8.0\Museum_Domain.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.csproj.AssemblyReference.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.AssemblyInfoInputs.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.AssemblyInfo.cs
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.csproj.CoreCompileInputs.cache
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.sourcelink.json
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.csproj.Up2Date
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\refint\Museum_App.dll
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\Museum_App.pdb
+C:\Users\berkay\source\repos\Muscle_Museum\Museum.App\obj\Debug\net8.0\ref\Museum_App.dll

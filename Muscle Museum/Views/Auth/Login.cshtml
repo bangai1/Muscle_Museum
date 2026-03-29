@@ -1,0 +1,114 @@
+﻿@model Login_ViewModel
+
+@{
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            width: 380px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+            .login-box h2 {
+                margin-bottom: 25px;
+                color: #333;
+            }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+            .input-group label {
+                font-size: 14px;
+                color: #666;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 12px;
+                margin-top: 6px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                transition: 0.3s;
+            }
+
+                .input-group input:focus {
+                    border-color: #243b55;
+                    outline: none;
+                    box-shadow: 0 0 6px rgba(36,59,85,0.5);
+                }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #243b55;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .login-btn:hover {
+                background: #141e30;
+            }
+
+        .error {
+            margin-top: 15px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <form method="post">
+            <div class="input-group">
+                <label>Kullanıcı Adı</label>
+                <input type="text" name="Username" required />
+            </div>
+
+            <div class="input-group">
+                <label>Şifre</label>
+                <input type="number" name="Password" required />
+            </div>
+
+            <button type="submit" class="login-btn">Giriş Yap</button>
+        </form>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error">Hatalı giriş</div>
+        }
+    </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ namespace Museum_App.Interfaces
 {
     public interface ITicketSaleService
     {
-        TicketResultDto SellTicket(Visitor visitor, Ticket_Type type);
+        TicketResultDto SellTicket(Visitor visitor);
     }
 
 }

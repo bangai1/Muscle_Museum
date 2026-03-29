@@ -1,4 +1,5 @@
 ﻿@model Museum_App.DTOs.TicketResultDto
+@using Museum_App.Helpers
 
 <h2>Bilet Bilgileri</h2>
 
@@ -6,13 +7,15 @@
 
 <p>
     <strong>Bilet Türü:</strong>
-    @Model.Ticket_Type
+    @TicketHelper.GetTicketDisplayName(Model.Ticket)
 </p>
 
 <p>
     <strong>Ücret:</strong>
     @Model.Price ₺
 </p>
+
+
 
 @if (Model.Price == 0)
 {

@@ -1,21 +1,20 @@
-﻿namespace Museum_Domain.Models;
+﻿using Museum_Domain.Enums;
 
-public class Visitor
+namespace Museum_Domain.Models
 {
-    public int ID { get; set; }
-    public string? Name { get; set; }
-    public string? Last_Name { get; set; }
-    public int Phone_Number { get; set; }
-    public int Age { get; set; }
-    public string? Email_Address { get; set; }
-    public string? Nationality { get; set; }
+    public class Visitor
+    {
+        public Visitor_Type VisitorType { get; set; }
+
+        public int Id { get; set; }
+
+        public int Age { get; set; }
+
+        public bool HasMuseumCard { get; set; }
 
 
-    public bool IsTurkish { get; set; }
-    public bool IsTurkish_Soldier { get; set; }
+        public List<Ticket> Tickets { get; set; } = new();
 
 
-   // public bool IsForeign { get; set; }
-   // public bool IsForeign_Soldier { get; set; }
-
+    }
 }

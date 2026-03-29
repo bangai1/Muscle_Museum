@@ -10,7 +10,7 @@ namespace Museum_Infrastructure.Services
         {
             var text = new StringBuilder();
             text.AppendLine("====== MUSEUM TICKET ======");
-            text.AppendLine($"Ticket Type : {ticket.Type}");
+            text.AppendLine($"Ticket Type : {ticket.TicketType}");
             text.AppendLine($"Price       : {ticket.Price} ₺");
             text.AppendLine($"Date        : {DateTime.Now}");
             text.AppendLine("===========================");

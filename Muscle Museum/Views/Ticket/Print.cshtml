@@ -1,48 +1,77 @@
-﻿@model Ticket_Print_ViewModel
+﻿@model Museum_App.DTOs.TicketResultDto
+@using Museum_App.Helpers
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ticket</title>
 
-    <style>
-        body {
-            font-family: monospace;
-            width: 300px;
-            margin: auto;
+<style>
+    .ticket {
+        width: 300px;
+        margin: auto;
+        border: 1px dashed black;
+        padding: 20px;
+        text-align: center;
+        font-family: monospace;
+    }
+
+    @@media print {
+        body * {
+            visibility: hidden; /* Tüm body gizle */
+        }
+
+        .ticket, .ticket * {
+            visibility: visible; /* Sadece ticket görünür */
         }
 
         .ticket {
-            border: 1px dashed black;
-            padding: 10px;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
+    }
 
-       
-    </style>
-</head>
-<body>
 
-    <div class="ticket">
-        <h3>
-            <h3 style="text-align:center;">
-            <img src="~/lib/images/logo.png" alt="logo" />
-            </br>
-            <h3 style="text-align:center;">
-            Hava Kuvvetleri Ankara  Müzesi
-        </h3>
-        <hr />
+</style>
 
-        <p>Tarih: @Model.Date</p>
-        <p>Ücret: @Model.Price ₺</p>
-        <p>Referans: @Model.ReferenceNo</p>
+<div class="ticket">
 
-        <hr />
-        <p>İyi gezmeler dileriz.</p>
-    </div>
+    <img src="~/lib/images/logo.png" alt="Logo" style="width:120px;" />
 
-    <br />
+    <h3>Hava Kuvvetleri<br />Ankara Müzesi</h3>
 
-    <button onclick="window.print()">🖨 Yazdır</button>
+    <hr />
 
-</body>
-</html>
+    @*    <h2>Bilet Başarılı</h2>*@
+    <h2>Bilet Türü: @TicketHelper.GetTicketDisplayName(Model.Ticket)</h2>
+    <p>Fiyat: @Model.Price</p>
+    <p>Tarih: @Model.Date.ToString("dd/MM/yyyy HH:mm")</p>
+    @*<p>Tür: @Model.Ticket_Type</p>*@
+    <p>Referans No: @Model.ReferenceNo</p>
+    <p>@Model.Message</p>
+
+    <hr />
+
+    <p>İyi gezmeler dileriz.</p>
+    <h3>LÜTFEN BİLETİNİZİ ÇIKIŞ YAPANA KADAR ATMAYINIZ</h3>
+
+</div>
+
+<br />
+
+<form asp-action="ConfirmPrint" method="post" id="printForm">
+    <input type="hidden" asp-for="ReferenceNo" />
+
+    <button type="button" class="btn btn-primary" onclick="printAndConfirm()">
+        🖨 Yazdır ve Onayla
+    </button>
+</form>
+
+<script>
+    function printAndConfirm() {
+        
+        window.print();
+
+        
+        setTimeout(function() {
+            document.getElementById("printForm").submit();
+        }, 1000);
+    }
+</script>

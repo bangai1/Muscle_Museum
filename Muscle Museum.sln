@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muscle_Museum", "Muscle Museum\Muscle_Museum.csproj", "{315847E4-266A-48AE-9E3C-3D0C4E2092C3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87D2A3FB-E507-48A5-96BD-8275EB49EB9F} = {87D2A3FB-E507-48A5-96BD-8275EB49EB9F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Museum_Domain", "Museum.Domain\Museum_Domain.csproj", "{87D2A3FB-E507-48A5-96BD-8275EB49EB9F}"
 EndProject

@@ -733,16 +733,16 @@
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 Jan 2026 09:20:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Muscle_Museum/Muscle_Museum.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Muscle_Museum.srks792vmi.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Muscle_Museum.qe558lbi3k.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KGONlnJNxZwUq5nUKMXknY3O8uR6djsHriWQ55QPt5c="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KGONlnJNxZwUq5nUKMXknY3O8uR6djsHriWQ55QPt5c=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 10:42:52 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-olYZG7gvL7MxMaVxtuYr7ISX4OrU/LuEUTxSN3Z2Z9Q="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022olYZG7gvL7MxMaVxtuYr7ISX4OrU/LuEUTxSN3Z2Z9Q=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Mar 2026 15:10:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Muscle_Museum/Muscle_Museum.srks792vmi.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Muscle_Museum.srks792vmi.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Muscle_Museum/Muscle_Museum.qe558lbi3k.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Muscle_Museum.qe558lbi3k.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"srks792vmi"},{"Name":"integrity","Value":"sha256-KGONlnJNxZwUq5nUKMXknY3O8uR6djsHriWQ55QPt5c="},{"Name":"label","Value":"_content/Muscle_Museum/Muscle_Museum.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KGONlnJNxZwUq5nUKMXknY3O8uR6djsHriWQ55QPt5c=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 10:42:52 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qe558lbi3k"},{"Name":"integrity","Value":"sha256-olYZG7gvL7MxMaVxtuYr7ISX4OrU/LuEUTxSN3Z2Z9Q="},{"Name":"label","Value":"_content/Muscle_Museum/Muscle_Museum.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022olYZG7gvL7MxMaVxtuYr7ISX4OrU/LuEUTxSN3Z2Z9Q=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Mar 2026 15:10:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

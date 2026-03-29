@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("f11e491d-2690-4cf9-9fb2-e76fbba1b222")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Muscle_Museum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbe821e93945483a592bc941be1741450c2c9a33")]
 [assembly: System.Reflection.AssemblyProductAttribute("Muscle_Museum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Muscle_Museum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

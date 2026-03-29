@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bilet İptal Sonucu</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg,#141e30,#243b55);
+            font-family: Arial, sans-serif;
+        }
+
+        .result-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 400px;
+        }
+
+            .result-box h2 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .result-box a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: #243b55;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+                .result-box a:hover {
+                    background: #141e30;
+                }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        @if (TempData["Message"] != null)
+        {
+            <h2>@TempData["Message"]</h2>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <h2 style="color:red;">@TempData["Error"]</h2>
+        }
+
+        <a href="@Url.Action("Index", "Ticket")">Ticket Sayfasına Dön</a>
+    </div>
+</body>
+</html>

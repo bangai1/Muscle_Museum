@@ -1,24 +1,35 @@
 ﻿using Museum_Domain.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Museum_Domain.Models;
-
-
+namespace Museum_Domain.Models
+{
     public class Ticket
     {
-         public Ticket_Type Type { get; set; }
-        public int ID { get; set; }
-        public string? Ticket_Type { get; set; } //maybe 
-        public decimal Price { get; set; }
-        public int Ticket_Serial_Number { get; set; }
+        public int Id { get; set; }
 
-    public Ticket()
-    {
-        Ticket_Serial_Number = 0;
-    }
+        public bool IsCancelled { get; set; } //iptal işi
 
-    public Ticket(Ticket_Type type)
-    {
-        Type = type;
+        public DateTime CancelDate {  get; set; }
+
+        [NotMapped]
+        public Ticket_Type TicketType { get; set; }
+
+        public int Price { get; set; }
+
+        public string ReferenceNo { get; set; } = Guid.NewGuid().ToString();
+
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+
+        public int VisitorId { get; set; }
+
+        public Visitor Visitor { get; set; } = null!; 
+
+        public Ticket() { }
+
+        public Ticket( int price)
+        {
+            //TicketType = ticketType;
+            Price = price;
+        }
     }
 }
-

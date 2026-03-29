@@ -1,34 +1,433 @@
-﻿@model Create_Ticket_ViewModel
+﻿@model Muscle_Museum.Models.Create_Ticket_ViewModel
 
-<h2>🎟 Bilet Satış Ekranı</h2>
 
-<form asp-action="Sell" method="post">
-    <div>
-        <label>Yaş</label>
-        <input asp-for="Age" type="number" required />
+
+<form method="post" asp-action="Cancel" style="position: absolute; top: 100px; left: 1300px;">
+    <input type="text" name="referenceCode" placeholder="Referans Kodu" required />
+    <button type="submit">Bilet İptal</button>
+</form>
+
+<h2 class="mb-4">🎟 Bilet Satış</h2>
+
+
+
+@if (TempData["Message"] != null)
+{
+    <div style="color:green;">
+        @TempData["Message"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div style="color:red;">
+        @TempData["Error"]
+    </div>
+}
+
+
+
+<form asp-action="Sell" method="post" id="ticketForm">
+   
+
+    <!-- STEP 1 -->
+    <div id="stepCitizen" class="card-box">
+        <h4>Uyruk Seç</h4>
+        <button type="button" class="btn-step" onclick="selectCitizen('turkish')">🇹🇷 Türk</button>
+        <button type="button" class="btn-step" onclick="selectCitizen('foreign')">🌍 Yabancı</button>
     </div>
 
-    <div>
-        <label>
-            <input asp-for="IsTurkish" type="checkbox" />
-            Türk Vatandaşı
-        </label>
+    <!-- STEP 2 TURK -->
+    <div id="stepTurkish" class="card-box hidden">
+        <h4>Durum</h4>
+        <button type="button" class="btn-step" onclick="selectTurkish('student')">🎓 Öğrenci</button>
+        <button type="button" class="btn-step" onclick="selectTurkish('parent')">👨‍👩‍👧 Veli</button>
+        <button type="button" class="btn-step" onclick="selectTurkish('visitor')">🧍 Ziyaretçi</button>
+        <button type="button" class="btn-step" onclick="selectTurkish('soldier')">🪖 Asker</button>
     </div>
 
-    <div>
-        <label>
-            <input asp-for="IsTurkishSoldier" type="checkbox" />
-            Asker
-        </label>
+    <!-- STEP 2 FOREIGN -->
+    <div id="stepForeign" class="card-box hidden">
+        <h4>Durum</h4>
+        <button type="button" class="btn-step" onclick="selectForeign('student')">🎓 Öğrenci</button>
+        <button type="button" class="btn-step" onclick="selectForeign('visitor')">🧍 Ziyaretçi</button>
+    </div>
+
+    <!-- STEP 3 AGE -->
+    <div id="stepAge" class="card-box hidden">
+        <h4>Yaş Gir</h4>
+        <input asp-for="Age" type="number" class="form-control w-25" id="AgeInput" />
     </div>
 
     <br />
 
-    <button type="submit">🎟 Bilet Sat</button>
+    <button type="button" id="confirmBtn" class="btn btn-success hidden" onclick="confirmSale()">
+        🎟 Yazdır
+    </button>
+
+    <!-- Hidden -->
+    <input type="hidden" asp-for="IsTurkish" id="IsTurkish" />
+    <input type="hidden" asp-for="IsTurkishStudent" id="IsTurkishStudent" />
+    <input type="hidden" asp-for="IsTurkishVisitor" id="IsTurkishVisitor" />
+    <input type="hidden" asp-for="IsTurkishSoldier" id="IsTurkishSoldier" />
+    <input type="hidden" asp-for="IsForeignStudent" id="IsForeignStudent" />
+    <input type="hidden" asp-for="IsForeignVisitor" id="IsForeignVisitor" />
+    <input type="hidden" asp-for="IsVeli" id="IsVeli" />
+
 </form>
 
-@if (Model != null && Model.Success == false)
-{
-    <hr />
-    <p style="color:red">@Model.Message</p>
-}
+<!-- ALERT -->
+<div id="customAlert">
+    <div class="alert-box">
+        <h4 id="alertTitle"></h4>
+        <p id="alertMessage"></p>
+         <button class="btn btn-primary" onclick="closeAlert()">Tamam</button>
+    </div>
+</div>
+
+<style>
+    .card-box {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn-step {
+        padding: 12px 18px;
+        margin: 8px;
+        border-radius: 10px;
+        border: none;
+        background: #f1f1f1;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .btn-step:hover {
+            background: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+    .hidden {
+        display: none;
+    }
+
+    /* ALERT */
+    #customAlert {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .alert-box {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        width: 300px;
+        text-align: center;
+        animation: scaleIn 0.2s ease;
+    }
+
+    @@keyframes scaleIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+    }
+
+    .alert-box h4 {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .alert-box p {
+        font-size: 18px;
+        font-weight: 700;
+        color: #222;
+    }
+
+</style>
+
+<script>
+    const stepTurkish = document.getElementById("stepTurkish");
+    const stepForeign = document.getElementById("stepForeign");
+    const stepAge = document.getElementById("stepAge");
+    const confirmBtn = document.getElementById("confirmBtn");
+
+    const IsTurkish = document.getElementById("IsTurkish");
+    const IsTurkishStudent = document.getElementById("IsTurkishStudent");
+    const IsTurkishVisitor = document.getElementById("IsTurkishVisitor");
+    const IsTurkishSoldier = document.getElementById("IsTurkishSoldier");
+    const IsForeignStudent = document.getElementById("IsForeignStudent");
+    const IsForeignVisitor = document.getElementById("IsForeignVisitor");
+    const IsVeli = document.getElementById("IsVeli");
+
+    const ageInput = document.getElementById("AgeInput");
+
+    const alertBox = document.getElementById("customAlert");
+    const alertTitle = document.getElementById("alertTitle");
+    const alertMessage = document.getElementById("alertMessage");
+
+    //Ödemi alındı mı ? ekranı
+
+    function showAlert(title, message) {
+        alertTitle.innerText = title;
+        alertMessage.innerHTML = `<strong style="font-size:18px;">${message}</strong>`;
+        alertBox.style.display = "flex";
+    }
+    function closeAlert() {
+        alertBox.style.display = "none";
+    }
+
+    function resetAll() {
+        IsTurkish.value = "false";
+        IsTurkishStudent.value = "false";
+        IsTurkishSoldier.value = "false";
+        IsForeignStudent.value = "false";
+        IsForeignVisitor.value = "false";
+        IsVeli.value = "false";
+    }
+
+    function hideAllSteps() {
+        stepTurkish.classList.add("hidden");
+        stepForeign.classList.add("hidden");
+        stepAge.classList.add("hidden");
+        confirmBtn.classList.add("hidden");
+    }
+
+    function selectCitizen(type) {
+        resetAll();
+        hideAllSteps();
+
+        if (type === "turkish") {
+            stepTurkish.classList.remove("hidden");
+            IsTurkish.value = "true";
+        } else {
+            stepForeign.classList.remove("hidden");
+        }
+    }
+
+    function selectTurkish(type) {
+        resetAll();
+        hideAllSteps();
+        IsTurkish.value = "true";
+
+        if (type === "student") {
+            IsTurkishStudent.value = "true";
+            stepAge.classList.remove("hidden");
+        }
+
+        if (type === "parent") {
+        IsVeli.value = "true";
+        setPrice(160);
+        ageInput.value = 30; // Veli için dummy age
+        showAlert("Bilet Bilgisi", "Veli bileti: 160 TL");
+        confirmBtn.classList.remove("hidden");
+        }
+
+        if (type === "visitor"){
+            IsTurkishVisitor.value="true";
+            stepAge.classList.remove("hidden");
+
+        }
+        
+        if (type === "soldier") {
+        IsTurkishSoldier.value = "true";
+        setPrice(10);
+        ageInput.value = 30; // Asker için dummy age
+        showAlert("Bilet Bilgisi", "Asker ücretsiz (0 TL)");
+        confirmBtn.classList.remove("hidden");
+        }
+    }
+
+    function selectForeign(type) {
+        resetAll();
+        hideAllSteps();
+
+        if (type === "student") {
+            IsForeignStudent.value = "true";
+            stepAge.classList.remove("hidden");
+        }
+
+        if (type === "visitor") {
+            IsForeignVisitor.value = "true";
+            stepAge.classList.remove("hidden");
+        }
+    }
+
+        function setPrice(price) {
+        let priceInput = document.getElementById("Price");
+
+        if (!priceInput) {
+            priceInput = document.createElement("input");
+            priceInput.type = "hidden";
+            priceInput.id = "Price";
+            priceInput.name = "Price";
+            document.getElementById("ticketForm").appendChild(priceInput);
+        }
+
+        priceInput.value = price;
+    }
+
+    // ENTER
+    ageInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            validateAge();
+        }
+    });
+
+       function validateAge() {
+        const age = parseInt(ageInput.value);
+
+        if (!age || age < 0) {
+            showAlert("Hata", "Geçerli bir yaş giriniz");
+            return;
+        }
+
+        let price = 160; // default tam bilet
+        let message = "Tam Bilet: 160 TL";
+
+        // ÜCRETSİZ
+        if (age <= 18 || age >= 65) {
+            price = 0;
+            message = "Ücretsiz bilet (0 TL)";
+        }
+
+
+        //TÜRK ASKERİ
+           else if (IsTurkishSoldier.value ==  "true") {
+                price = 0;
+                message = "Türk Askeri: 0 TL";
+
+        }
+
+
+        // TÜRK ÖĞRENCİ
+        else if (IsTurkish.value === "true" && IsTurkishStudent.value === "true") {
+            if (age >= 18 && age <= 25) {
+                price = 50;
+                message = "Türk Öğrenci: 50 TL";
+            } else {
+                showAlert("Hata", "Türk öğrenci yaşı 18-25 olmalı");
+                return;
+            }
+        }
+
+
+        // YABANCI ÖĞRENCİ
+        else if (IsForeignStudent.value === "true") {
+            if (age >= 12 && age <= 25) {
+                price = 375;
+                message = "Yabancı Öğrenci: 375 TL";
+            } else {
+                price = 750;
+                message = "Yabancı Ziyaretçi: 750 TL";
+            }
+        }
+
+        // YABANCI ZİYARETÇİ
+        else if (IsForeignVisitor.value === "true") {
+            price = 750;
+            message = "Yabancı Ziyaretçi: 750 TL";
+        }
+
+        // TÜRK ZİYARETÇİ
+        else {
+            price = 160;
+            message = "Tam Bilet: 160 TL";
+        }
+
+        // hidden price ekle
+        let priceInput = document.getElementById("Price");
+        if (!priceInput) {
+            priceInput = document.createElement("input");
+            priceInput.type = "hidden";
+            priceInput.id = "Price";
+            priceInput.name = "Price";
+            document.getElementById("ticketForm").appendChild(priceInput);
+        }
+        priceInput.value = price;
+
+        showAlert("Bilet Bilgisi", message);
+        confirmBtn.classList.remove("hidden");
+    }
+
+
+        function confirmSale() {
+        showConfirm("Ödeme Onayı", "Ücret alındı mı?", function () {
+            document.getElementById("ticketForm").submit();
+        });
+    }
+
+
+            function showConfirm(title, message, onYes) {
+        alertTitle.innerText = title;
+
+        alertMessage.innerHTML = `
+            <div style="font-size:20px; font-weight:700; margin-bottom:15px;">
+                ${message}
+            </div>
+
+            <button onclick="confirmYes()" style="
+                background:#28a745;
+                color:white;
+                border:none;
+                padding:15px 30px;
+                font-size:18px;
+                border-radius:10px;
+                margin:10px;
+                cursor:pointer;
+                font-weight:bold;
+            ">✔ EVET</button>
+
+            <button onclick="closeAlert()" style="
+                background:#dc3545;
+                color:white;
+                border:none;
+                padding:15px 30px;
+                font-size:18px;
+                border-radius:10px;
+                margin:10px;
+                cursor:pointer;
+                font-weight:bold;
+            ">✖ HAYIR</button>
+        `;
+
+        window.confirmCallback = onYes;
+        alertBox.style.display = "flex";
+    }
+
+    function confirmYes() {
+        closeAlert();
+        if (window.confirmCallback) {
+            window.confirmCallback();
+        }
+    }
+
+    // dışarı tıklayınca kapat
+    alertBox.addEventListener("click", function (e) {
+        if (e.target === alertBox) {
+            closeAlert();
+        }
+    });
+
+
+</script>

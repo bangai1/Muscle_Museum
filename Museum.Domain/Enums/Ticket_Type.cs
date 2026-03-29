@@ -2,10 +2,8 @@
 
     public enum Ticket_Type
     {
-            TurkishPaid,
-            TurkishFree,
-            ForeignPaid,
-            SoldierFree,   
+            Full,
+            Free,
     }
 
 

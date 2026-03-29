@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Muscle_Museum</RootNamespace>
+    <UserSecretsId>f11e491d-2690-4cf9-9fb2-e76fbba1b222</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,8 +20,15 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Museum.App\Museum_App.csproj" />
     <ProjectReference Include="..\Museum.Infrastructure\Museum_Infrastructure.csproj" />
   </ItemGroup>
+
 
 </Project>
